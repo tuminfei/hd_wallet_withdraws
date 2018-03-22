@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+# Enables UTF-8 compatibility in ruby 1.8.
+$KCODE = 'u' if RUBY_VERSION < '1.9'
+
+$LOAD_PATH.unshift(File.expand_path("../../lib", __FILE__))
+
+require "hd_wallet_withdraws"
+require 'optparse'
+require 'irb'
+require 'yaml'
+require 'rubygems'
+require 'rails/all'
+
+options = {}
+option_parser = OptionParser.new do |opts|
+  opts.banner = 'here is help messages of the command line tool.'
+
+  opts.on('-v', '--version', 'Prints the version') do
+    puts HdWalletWithdraws::VERSION
+    exit
+  end
+
+  opts.on('-c FILE_PATH', '--config FILE_PATH', 'Pass-in config path') do |value|
+    options[:config_file_path] = value
+  end
+
+end.parse!
+
+puts options.inspect
+
+if options[:config_file_path]
+  HdWalletWithdraws.init_yml = {
+      :collect_config => File.join(options[:config_file_path], 'withdraw_config.yml'),
+      :database_config => File.join(options[:config_file_path], 'database.yml'),
+  }
+else
+  $stderr.puts("To specify a custom config file use `hd_wallet_withdraws -c path/to/config_path`.")
+  exit
+end
+
+cli = HdWalletWithdraws::WithdrawServer.new
+cli.run!

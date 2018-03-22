@@ -1,0 +1,8 @@
+database:
+  adapter: 'mysql2'
+  host: localhost
+  port: 3306
+  encoding: utf8
+  database: peatio_development
+  username: root
+  password:

@@ -1,0 +1,219 @@
+scheduler_name: 'auto_withdraw'
+infura_token: ''
+infura_chain: 'main'
+scheduler_params:
+  withraw_when_ever: '5s'
+  watcher_when_ever: '5s'
+exchange_params:
+  api_url: 'http://www/api/v2/'
+  access_key: ''
+  secret_key: ''
+  address: ''
+  private_key: ''
+  fill_gas_limit: 40000
+  fill_gas_price: 3000000000
+wallet_params:
+  wallet_xprv: ''
+  wallet_ids: '0,3000'
+currencies:
+  - id: 4
+    key: ethereum
+    code: eth
+    coin: true
+    withdraw: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_decimals: 18
+
+  - id: 5
+    key: attention
+    code: atm
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x9B11EFcAAA1890f6eE52C6bB7CF8153aC5d74139"
+    token_decimals: 8
+
+  - id: 8
+    key: eoscoin
+    code: eos
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0" # token的合约地址
+    token_decimals: 18
+
+  - id: 9
+    key: status
+    code: snt
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x744d70fdbe2ba4cf95131626614a1763df805b9e" # token的合约地址
+    token_decimals: 18
+
+  - id: 10
+    key: makerdao
+    code: mkr
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0xc66ea802717bfb9833400264dd12c2bceaa34a6d" # token的合约地址
+    token_decimals: 18
+
+  - id: 11
+    key: mhtoken
+    code: mht
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x67a8c7edadd6827056f489abdff85fb5a4b2182c" # token的合约地址
+    token_decimals: 4
+
+  - id: 12
+    key: cetoken
+    code: cxtc
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x81ce924c7411d7e0c2c000471b1ba77851c99ae6" # token的合约地址
+    token_decimals: 18
+
+  - id: 13
+    key: ethereumgem
+    code: egt
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x15b683f780736217a34a058ec8179595e8a84c5b" # token的合约地址
+    token_decimals: 8
+
+  - id: 14
+    key: fueloftoken
+    code: fut
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x027971a9609345ba6f2fa5b0f671cceba5d6ea54" # token的合约地址
+    token_decimals: 8
+
+  - id: 15
+    key: tronix
+    code: trx
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0xf230b790e05390fc8295f4d3f60332c93bed42e2" # token的合约地址
+    token_decimals: 6
+
+  - id: 16
+    key: icontoken
+    code: icx
+    coin: true
+    withdraw: true
+    erc20: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0xb5a5f22694352c15b00323844ad545abb2b11028" # token的合约地址
+    token_decimals: 18
+
+  - id: 17
+    key: panaxtoken
+    code: bpt
+    coin: true
+    erc20: true
+    withdraw: true
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0xcbbE432D9f844e5548e9053aF0348e3779259FD1" # token的合约地址
+    token_decimals: 8
+
+  - id: 18
+    key: sixdomainasset
+    code: sda
+    coin: true
+    erc20: true
+    withdraw: true
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x4212fea9fec90236ecc51e41e2096b16ceb84555" # token的合约地址
+    token_decimals: 18
+
+  - id: 19
+    key: intelligentcommercechain
+    code: icc
+    coin: true
+    erc20: true
+    withdraw: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0xedc502b12ced7e16ce21749e7161f9ed22bfca53" # token的合约地址
+    token_decimals: 4
+
+  - id: 20
+    key: maggietoken
+    code: mag
+    coin: true
+    erc20: true
+    visible: true
+    withdraw: true
+    quick_withdraw_max: 0
+    gas_limit: 200000
+    gas_price: 3000000000
+    token_contract_address: "0x647f274b3a7248d6cf51b35f08e7e7fd6edfb271" # token的合约地址
+    token_decimals: 0
+
+  - id: 21
+    key: followcoin
+    code: fllw
+    coin: true
+    erc20: true
+    withdraw: true
+    quick_withdraw_max: 0
+    gas_limit: 260000
+    gas_price: 3000000000
+    token_contract_address: "0x0200412995f1bafef0d3f97c4e28ac2515ec1ece" # token的合约地址
+    token_decimals: 18
+
+  - id: 22
+    key: maggietoken
+    code: ncs
+    coin: true
+    erc20: true
+    visible: true
+    withdraw: true
+    quick_withdraw_max: 0
+    gas_limit: 60000
+    gas_price: 3000000000
+    token_contract_address: "0xa60354005b3897bC684244B593fA6F5F18ECd13e" # token的合约地址
+    token_decimals: 8
